@@ -1,0 +1,291 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Hans Kendrick";
+    src: url(../fonts/HansKendrick-Regular.otf);
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #e2e7ec;
+    display: flex;
+}
+
+.fa-main {
+    margin: 81px auto 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1140px;
+    min-width: 740px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Hans Kendrick", sans-serif;
+}
+
+.fa-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fa-container__cell {
+    margin: 0;
+    width: 380px;
+    height: 540px;
+    display: flex;
+    flex-grow: 0;
+    padding: 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.fa-background {
+    background-color: #ffffff;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.fa-background:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 50px #ffffff;
+}
+
+/*-------------------------first block style----------------------*/
+.fa-container:first-child .fa-container__cell:first-child {
+    min-width: 740px;
+    -webkit-flex-grow: 3;
+    flex-grow: 3;
+}
+
+.fa-container:first-child .fa-container__cell:first-child .background-img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    background: linear-gradient(to top, black 0%, transparent 100%), url(../assets/car.png);
+    background-size: 100% 100%;
+}
+
+.fa-description--first {
+    height: 96px;
+    width: 433px;
+    margin-left: 43px;
+    margin-top: 380px;
+    color: #ffffff;
+    position: absolute;
+}
+
+.fa-description--first .fa-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.fa-container:first-child .fa-container__cell:first-child address {
+    opacity: 0.5;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.fa-background h1 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 36px;
+    height: 60px;
+}
+
+/*-------------------------end first block style----------------------*/
+
+/*-------------------------other block style----------------------*/
+
+.fa-man-img {
+    background-image: url("../assets/man-face.png");
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    margin-top: 70px;
+    margin-left: 28px;
+    z-index: 2;
+}
+
+.fa-description {
+    width: 335px;
+    height: 112px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 28px;
+    padding-left: 28px;
+    z-index: 2;
+}
+
+.fa-description address {
+    width: 133px;
+    height: 13px;
+    color: #818181;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.fa-background h2 {
+    width: 307px;
+    height: 78px;
+    color: #1d1d1d;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 30px;
+}
+
+.background-img {
+    width: 100%;
+    height: 251px;
+}
+
+.fa-container:first-child .fa-container__cell:last-child .background-img {
+    background: url("../assets/girl.png") left #eee;
+    background-size: 100% 100%;
+
+}
+
+.fa-container:last-child .fa-container__cell:first-child .background-img {
+    background: url("../assets/two-girl.png") left #eee;
+    background-size: 100% 100%;
+}
+
+.fa-container:last-child .fa-container__cell:nth-child(2) .background-img {
+    background: url("../assets/lags.png") left #eee;
+    background-size: 100% 100%;
+}
+
+.fa-container:last-child .fa-container__cell:last-child .background-img {
+    background: url("../assets/branch-car.png") left #eee;
+    background-size: 100% 100%;
+
+}
+
+.fa-container:last-child .fa-container__cell:nth-child(2) h2 {
+    margin-top: 62px;
+    margin-left: 28px;
+    z-index: 2;
+}
+
+/*--------------foooter--------------*/
+/*
+.fa-footer{
+    margin: 0 auto;
+    width: 207px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.fa-footer_img{
+    background-color: #e2e7ec;
+}
+.fa-footer_text{
+    width: 164px;
+    height: 11px;
+    color: #99a5b0;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 30px;
+    text-transform: uppercase;
+} */
+
+/*-----------------------------------------------------------------------*/
+/*----------------------some media transformatuon style------------------*/
+@media screen and (max-width: 720px) {
+
+    * {
+        transition-timing-function: ease;
+    }
+    .fa-main{
+        min-width: 320px;
+        width: 100%;
+    }
+    .fa-container:first-child .fa-container__cell:first-child {
+        min-width: 320px;
+       width: 100%;
+    }
+    .fa-container__cell {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    .fa-background {
+        position: relative;
+    }
+
+    .background-img {
+        position: absolute;
+        height: 100%;
+        z-index: 0;
+        transition-duration: 0.5s;
+    }
+
+    .fa-description {
+        width: 335px;
+        height: 132px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 8px;
+    }
+
+    .fa-background h2 {
+        transition-duration: 1s;
+        color: #ffffff;
+    }
+
+    .fa-man-img {
+        visibility: hidden;
+    }
+
+    .fa-background h2 {
+        width: 433px;
+        margin-top: 23px;
+    }
+
+    .fa-description address {
+        margin-top: 374px;
+        transition-duration: 1s;
+    }
+
+    .fa-container:last-child .fa-container__cell:nth-child(2) h2 {
+        margin-top: 410px;
+        width: 433px;
+        margin-left: 28px;
+    }
+
+}
+
+@media screen and (max-width: 490px) {
+    .fa-background h1 ,.fa-background h2, .fa-container:last-child .fa-container__cell:nth-child(2) h2{
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+    width: 320px;}
+}
+
+
