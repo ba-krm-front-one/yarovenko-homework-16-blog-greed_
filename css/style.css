@@ -116,7 +116,7 @@ body {
 /*-------------------------other block style----------------------*/
 
 .fa-man-img {
-    background-image: url("../assets/man-face.png");
+
     height: 54px;
     width: 54px;
     border-radius: 50%;
@@ -189,20 +189,20 @@ body {
 }
 
 /*--------------foooter--------------*/
-/*
+
 .fa-footer{
-    margin: 0 auto;
+    margin: 79px auto;
     width: 207px;
     height: 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: relative;
-
 }
+
 .fa-footer_img{
     background-color: #e2e7ec;
 }
+
 .fa-footer_text{
     width: 164px;
     height: 11px;
@@ -211,10 +211,13 @@ body {
     font-weight: 800;
     line-height: 30px;
     text-transform: uppercase;
-} */
+    align-self:baseline;
+
+}
+/*--------------end foooter--------------*/
 
 /*-----------------------------------------------------------------------*/
-/*----------------------some media transformatuon style------------------*/
+/*----------------------some media transformation style------------------*/
 @media screen and (max-width: 720px) {
 
     * {
@@ -280,12 +283,17 @@ body {
     }
 
 }
-
+/*---- при сужении до малых размеров-----*/
 @media screen and (max-width: 490px) {
-    .fa-background h1 ,.fa-background h2, .fa-container:last-child .fa-container__cell:nth-child(2) h2{
+    .fa-background h1 ,.fa-background h2{
     transition-timing-function: ease;
     transition-duration: 0.5s;
     width: 320px;}
+    /*знаю что дублирую но в одну строку отказывается корректно работать на гитхабе*/
+    .fa-container:last-child .fa-container__cell:nth-child(2) h2{
+        transition-duration: 0.5s;
+        width: 320px;
+    }
 }
 
 
