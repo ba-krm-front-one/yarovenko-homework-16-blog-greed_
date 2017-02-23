@@ -285,15 +285,11 @@ body {
 }
 /*---- при сужении до малых размеров-----*/
 @media screen and (max-width: 490px) {
-    .fa-background h1 ,.fa-background h2{
+    .fa-background h1 ,.fa-background h2, .fa-container:last-child .fa-container__cell:nth-child(2) h2{
     transition-timing-function: ease;
     transition-duration: 0.5s;
-    width: 320px;}
-    /*знаю что дублирую но в одну строку отказывается корректно работать на гитхабе*/
-    .fa-container:last-child .fa-container__cell:nth-child(2) h2{
-        transition-duration: 0.5s;
-        width: 320px;
-    }
-}
+    width: 300px;
+   }
+  }
 
 
